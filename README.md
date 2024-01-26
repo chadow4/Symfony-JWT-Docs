@@ -19,7 +19,7 @@ composer require symfony/maker-bundle
 composer require symfony/orm-pack --with-all-dependencies
 composer require lexik/jwt-authentication-bundle:*
 ```
-## Etape 3 : Configuration Database Configuration 
+## Etape 3 : Configuration de la base de données
 .env
 ```yml
 
@@ -59,7 +59,7 @@ DATABASE_URL="mysql://!userDb:!passwordDb@127.0.0.1:3306/!nom_database?serverVer
 php bin/console doctrine:database:create
 ```
 
-## Etape 4 : Creation de la classe User
+## Etape 4 : Creation de l'entité User
 
 ```
 php bin/console make:user
