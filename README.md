@@ -261,30 +261,32 @@ security:
 
 ### Etape 9 : Lancer le serveur 
 
-```
+```bash
 symfony server:start
 ```
 
-Inscription : /api/register
+### Etape 10 : Test des Endpoints
+
+ **Inscription** (`/api/register`) : Permet aux utilisateurs de s'inscrire.
 
 ![image](https://github.com/chadow4/Symfony-JWT-Docs/assets/73313152/1bf8b0f5-c9c0-4ce2-8c10-4bdaad8a9d7b)
 
-Connexion : /api/login_check
+**Connexion** (`/api/login_check`) : Authentifie les utilisateurs et retourne un JWT.
 
 ![image](https://github.com/chadow4/Symfony-JWT-Docs/assets/73313152/d7f262aa-23b5-40ae-86a1-32d9984182e5)
 
-Dashoard : 
+ **Dashboard** (`/api/dashboard`) :
 
-Si nous ne sommes pas connecté (sans token) : Erreur 401
+ - Sans authentification : Erreur 401.
 
 ![image](https://github.com/chadow4/Symfony-JWT-Docs/assets/73313152/a51161b5-cb08-442d-9e25-9fcdb1279dbe)
 
-Si nous sommes connecté mais pas admin : Erreur 403
+ - Authentification sans rôle admin : Erreur 403.
 
 ![image](https://github.com/chadow4/Symfony-JWT-Docs/assets/73313152/6a7966bd-de0c-4773-a57f-b7cb358be183)
 
 
-Si nous sommes connecté et admin : Récupération des données
+ - Authentification avec rôle admin : Accès au dashboard et récupération des données.
 
 ![image](https://github.com/chadow4/Symfony-JWT-Docs/assets/73313152/a3cce982-b4e8-4130-8fa9-646b23f71f72)
 
