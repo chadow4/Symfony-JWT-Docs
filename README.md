@@ -5,7 +5,7 @@
 
 Little Documentation to learn JWT in Symfony 7
 
-## Etape 1 : Installation de Symfony 
+## Etape 1 : Création d'un projet
 
 ```
 composer create-project symfony/skeleton myproject
