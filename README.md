@@ -162,7 +162,6 @@ class RegistrationController extends AbstractController
 
         $user->setPassword($hashedPassword);
         $user->setEmail($email);
-        $user->setUsername($email);
         $user->setRoles(['ROLE_USER']);
 
         $em->persist($user);
@@ -193,17 +192,17 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[Route('/api', name: 'api_')]
 class DashboardController extends AbstractController
 {
-    #[Route('/dashboard', name: 'app_dashboard')]
+    #[Route('/dashboard', name: 'app_dashboard',methods: 'get')]
     #[IsGranted('ROLE_ADMIN', message: 'Access denied')]
     public function index(TokenStorageInterface $tokenStorage, UserRepository $userRepository): JsonResponse
     {
         $userIdentifier = $tokenStorage->getToken()->getUserIdentifier();
 
-        $user = $userRepository->findOneBy(['username' => $userIdentifier]);
+        $user = $userRepository->findOneBy(['email' => $userIdentifier]);
 
         return $this->json([
             'id' => $user->getId(),
-            'user' => $user->getUsername(),
+            'user' => $user->getEmail(),
             'roles' => $user->getRoles(),
         ]);
     }
