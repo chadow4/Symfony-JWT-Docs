@@ -3,7 +3,9 @@ Little Documentation to learn JWT in Symfony 7
 
 ## Etape 1 : Installation de Symfony 
 
-```composer create-project symfony/skeleton myproject```
+```
+composer create-project symfony/skeleton myproject
+```
 
 ## Etape 2 : Installation des différents packages
 
@@ -54,7 +56,11 @@ php bin/console doctrine:database:create
 ```
 
 ## Etape 4 : Creation de la classe User
-```php bin/console make:user```       
+
+```
+php bin/console make:user
+```       
+
 ```
  The name of the security user class (e.g. User) [User]:
  >
@@ -89,12 +95,18 @@ php bin/console doctrine:database:create
 ## Etape 5 : Creation de la migration
 
 création de la migration
-```php bin/console make:migration```
+```
+php bin/console make:migration
+```
 lancement de la migration pour mettre à jour la base de données
-```php bin/console doctrine:migrations:migrate```
+```
+php bin/console doctrine:migrations:migrate
+```
 
 ## Etape 6 : Configuration JWT Bundle
-```php bin/console lexik:jwt:generate-keypair```
+```
+php bin/console lexik:jwt:generate-keypair
+```
 
 dans le fichier config/routes.yaml ajouter : 
 ```yml
@@ -106,7 +118,9 @@ api_login_check:
 
 Nous allons dabord créer le RegistrationController
 
-```php bin/console make:controller RegistrationController```
+```
+php bin/console make:controller RegistrationController
+```
 src/Controller/RegistrationController.php
 ```php
 <?php
@@ -160,7 +174,9 @@ class RegistrationController extends AbstractController
 ```
 Maintenant nous allons créer le DashboardController qui récuperera les informations de l'utilisateur connecté et nous allons par exemple pouvoir donner l'accès qu'au role admin
 
-```php bin/console make:controller DashboardController```
+```
+php bin/console make:controller DashboardController
+```
 src/Controller/DashboardController.php 
 ```php
 <?php
@@ -239,7 +255,9 @@ security:
 
 ### Etape 9 : Lancer le serveur 
 
-```symfony server:start```
+```
+symfony server:start
+```
 
 Inscription : /api/register
 
