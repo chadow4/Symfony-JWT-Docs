@@ -212,6 +212,9 @@ class DashboardController extends AbstractController
 ## Etape 8 : Configuration Security.yaml 
 
 Lors de cette configuration nous allons dire que les routes /api/register et /api/login sont en public_access tandis que toute les autres routes /api sont accessible qu'en étant connecté
+
+config/package/security.yaml 
+
 ```yml
 security:
     password_hashers:
