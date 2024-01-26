@@ -1,4 +1,8 @@
+
+![image](https://github.com/chadow4/Symfony-JWT-Docs/assets/73313152/b2ad4dd7-fa08-4659-8565-525f1b87ccb1)
+
 # Symfony-JWT-Docs
+
 Little Documentation to learn JWT in Symfony 7
 
 ## Etape 1 : Installation de Symfony 
